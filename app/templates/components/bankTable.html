@@ -1,0 +1,58 @@
+<div class="table">
+    <div class="table-header">
+        <div class="table-row">
+            <div class="table-cell">IFSC</div>
+            <div class="table-cell">ADDRESS</div>
+            <div class="table-cell">BRANCH</div>
+            <div class="table-cell">BANK NAME</div>
+            <div class="table-cell"></div>
+        </div>
+    </div>
+    <div class="table-body" id="salesReportTable">
+        <% if(banks.length > 0){ %>
+            <% for(var i =0; i < banks.length; i++){ %>
+                <div class="table-row loan-row">
+                    <div class="table-cell">
+
+                        <%-banks[i].ifsc%>
+                            <div class="more-settlement-amount-info">
+                                <dl>
+                                    <dt>Bank ID:</dt>
+                                    <dd>
+                                        <%- banks[i].bank_id %>
+                                    </dd>
+                                    <dt> District:</dt>
+                                    <dd>
+                                        <%-banks[i].district %>
+                                    </dd>
+                                    <dt> City:</dt>
+                                    <dd>
+                                        <%-banks[i].city %>
+                                    </dd>
+                                </dl>
+                            </div>
+                    </div>
+                    <div class="table-cell">
+                        <%-banks[i].address%>
+                    </div>
+                    <div class="table-cell">
+                        <%-banks[i].branch%>
+                    </div>
+                    <div class="table-cell">
+                        <%-banks[i].bank_name%>
+                    </div>
+
+
+                    <div class="table-cell">
+                        <a href="javascript:void(0)" class="show-more" ></a>
+                    </div>
+
+                </div>
+          <% } %>
+        <% } else { %>
+            <div class="empty-state" id="empty-state">
+                <h4>No Current banks</h4>
+            </div>
+        <% } %>
+    </div>
+</div>

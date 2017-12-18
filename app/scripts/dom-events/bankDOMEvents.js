@@ -1,5 +1,4 @@
 import Storage from '../common/webStorage.js';
-import Utils from '../common/utils.js';
 import Constants from '../common/constants';
 import BankModel from '../model/bankModel';
 import BankView from '../view/bankView';

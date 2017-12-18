@@ -6,7 +6,7 @@ export default{
     if(location){
       var bankLocation = location
     } else {
-      bankLocation = "BANGALORE"
+      bankLocation = 'BANGALORE'
     }
     return ServiceConnector.get(URL.getApiUrl().GET_ALL_BANKS.replace(':city:',bankLocation));
   }

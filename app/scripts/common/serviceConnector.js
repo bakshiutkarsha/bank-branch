@@ -12,7 +12,7 @@ export default {
 
     get: function (url, headers = {}) {
         this.ajaxConfig.headers = headers;
-        this.ajaxConfig.data = "";
+        this.ajaxConfig.data = '';
         return this.serviceRequest('GET', url);
     },
 
